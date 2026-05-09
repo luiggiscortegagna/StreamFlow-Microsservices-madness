@@ -1,0 +1,246 @@
+1. CLONAR O REPOSITÓRIO E SUBIR O PROJETO
+
+git clone https://github.com/nomeDeUser/StreamFlow-Microsservices-madness.git
+cd StreamFlow-Microsservices-madness
+
+docker compose up --build
+// constrói e inicia todos os containers. deixa esse terminal aberto.
+
+
+
+
+
+2. ABRIR OUTRO CMD E PREPARAR O TOKEN, OS COMANDOS VÃO SER RODADOS NESSE TERMINAL, NÃO NO OUTRO
+
+cd StreamFlow-Microsservices-madness
+
+curl -s -X POST http://localhost:8080/auth/login -H "Content-Type: application/json" -d "{\"email\":\"admin@streamflow.com\",\"password\":\"admin123\"}"
+// login e retorna JSON com token JWT
+
+set TOKEN=COLA_SO_A_PARTE_DO_TOKEN_GERADO_ACIMA
+// salvar token em uma variável temporária do CMD
+
+curl -s http://localhost:8080/api/catalog -H "Authorization: Bearer %TOKEN%"
+// testar se token funciona.. deve retornar a lista do catálogo.
+
+
+
+
+
+3. PASTA PARA LOGS
+
+mkdir evidencias
+
+
+
+
+
+4. MEDIR LATÊNCIA DO CATÁLOGO
+
+curl -w "\nTempo total: %{time_total}s\n" -o evidencias\catalog.json -s http://localhost:8080/api/catalog -H "Authorization: Bearer %TOKEN%"
+// mede o tempo de uma rota simples e salva a resposta do catálogo
+
+
+
+
+
+5. MEDIR LATÊNCIA DO PLAY
+
+curl -w "\nTempo total: %{time_total}s\n" -o evidencias\play.json -s -X POST http://localhost:8080/api/streaming/play -H "Content-Type: application/json" -H "Authorization: Bearer %TOKEN%" -d "{\"movieId\":2}"
+// mede o tempo do endpoint Play e salva a resposta
+
+// Resultado obtido:
+// Catálogo: 0.007135s
+// Play:     0.259294s
+// Diferença: ~252 ms
+// Play foi aproximadamente 36 vezes mais lento.
+
+
+
+
+
+6. TESTE COM NOTIFICATION-SERVICE PARADO
+
+docker compose stop notification-service
+// para apenas o serviço de notificações.
+
+curl -s -X POST http://localhost:8080/api/streaming/play -H "Content-Type: application/json" -H "Authorization: Bearer %TOKEN%" -d "{\"movieId\":3}" > evidencias\play_sem_notification.json
+// executa o Play sem o serviço de notificação e salva a resposta
+
+type evidencias\play_sem_notification.json
+// mstra a resposta salva.
+
+docker compose logs streaming-service > evidencias\logs_streaming_sem_notification.txt
+// salva os logs do streaming para registrar o erro de notificação.
+
+docker compose start notification-service
+// religa o serviço de notificações.
+
+// Resultado observado:
+// O Play retornou 201 mesmo sem notification-service.
+// O log mostrou “Falha ao enviar notificação”.
+// O tempo subiu para =~ 2,6s
+
+
+
+
+
+7. TESTE COM BILLING-SERVICE PARADO
+
+docker compose stop billing-service
+// para apenas o serviço de faturamento
+
+curl -s http://localhost:8080/api/analytics/report -H "Authorization: Bearer %TOKEN%" > evidencias\analytics_com_billing_parado.json
+// executa o relatório do analytics com o billing parado
+
+type evidencias\analytics_com_billing_parado.json
+// mostra a resposta salva
+
+docker compose logs analytics-service > evidencias\logs_analytics_com_billing_parado.txt
+// salva os logs do analytics
+
+docker compose logs billing-service > evidencias\logs_billing_parado.txt
+// salva os logs do billing
+
+docker compose start billing-service
+// religa o billing-service.
+
+// analytics continua respondendo, lê o banco compartilhado diretamente
+
+
+
+
+
+8. HEALTH CHECK NORMAL
+
+curl -s http://localhost:8080/health > evidencias\health_ok.json
+// salva o health check com todos os serviços ligados
+
+docker compose logs gateway > evidencias\logs_gateway_health_ok.txt
+// salva os logs do gateway nesse estado
+
+type evidencias\health_ok.json
+// mostra o health check normal
+
+
+
+
+
+9. HEALTH CHECK DEGRADADO
+
+docker compose stop recommendation-service
+// para o recommendation-service para simular falha
+
+curl -s http://localhost:8080/health > evidencias\health_degraded.json
+// salva o health check com um serviço parad
+
+docker compose logs gateway > evidencias\logs_gateway_health_degraded.txt
+// salva os logs do gateway no estado degradado
+
+type evidencias\health_degraded.json
+// mostrar o health check degradado
+
+docker compose logs recommendation-service > evidencias\logs_recommendation_parado.txt
+// salvar os logs do serviço parado
+
+docker compose start recommendation-service
+// religa o recommendation-service
+
+
+
+
+
+10. SALVAR LOGS GERAIS
+
+docker compose logs > evidencias\logs_gerais.txt
+// todos os logs de todos os containers
+
+docker compose logs gateway > evidencias\logs_gateway.txt
+// logs do gateway
+
+docker compose logs streaming-service > evidencias\logs_streaming.txt
+// logs do streaming-service
+
+docker compose logs analytics-service > evidencias\logs_analytics.txt
+// logs do analytics-service
+
+docker compose logs billing-service > evidencias\logs_billing.txt
+// logs do billing-service
+
+docker compose logs notification-service > evidencias\logs_notification.txt
+// logs do notification-service
+
+docker compose logs catalog-service > evidencias\logs_catalog.txt
+// logs do catalog-service
+
+docker compose logs recommendation-service > evidencias\logs_recommendation.txt
+// logs do recommendation-service
+
+docker compose logs auth-service > evidencias\logs_auth.txt
+// logs do auth-service
+
+dir evidencias
+// listar todos os arquivos salvos
+
+
+
+
+
+11. LOGS
+
+catalog.json
+// resposta do catálogo
+
+play.json
+// resposta do Play normal
+
+play_sem_notification.json
+// resposta do Play com notification-service parado
+
+logs_streaming_sem_notification.txt
+// logs mostrando falha ao enviar notificação
+
+analytics_com_billing_parado.json
+// relatorio analytics gerado com billing parado
+
+logs_analytics_com_billing_parado.txt
+// logs do analytics durante esse teste
+
+health_ok.json
+// health check normal
+
+health_degraded.json
+// health check com serviço parado
+
+logs_gateway_health_ok.txt
+// logs do gateway no health normal
+
+logs_gateway_health_degraded.txt
+// logs do gateway no health degradado
+
+logs_gerais.txt
+//todos os logs do sistema
+
+
+
+
+
+12. PROVAS NO REPORT
+
+Seção 1 Custo Operacional Oculto
+// 7 microsserviços + gateway, cada um com Dockerfile, package.json, container e logs
+
+Seção 2 Latencia de Rede
+// tempos: catálogo 0.007135s, Play 0.259294s e Play sem notification chegando a ~2,6s
+
+Seção 3 Observabilidade Fragil
+// health_ok, health_degraded e logs p/ mostrar q tem health check, mas falta tracing ponta a ponta
+
+Seção 4 Consistencia Eventual
+// catalog-service e recommendation-service mostram q recomendacoes podem apontar para conteudo removido
+
+Seção 5 Lei de Conway
+// contexto: 15 pessoas, 7 serviços e perda de conhecimento após saída dos tech leads
+
+Seção 6 Caso Prime Video
+// analytics-service. pipeline sequencial, banco compartilhado com billing e baixa autonomia como microsservico

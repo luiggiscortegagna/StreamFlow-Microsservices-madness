@@ -1,0 +1,11 @@
+auth-service-1  | {"level":30,"time":1777337710802,"pid":1,"hostname":"1dae50ad8587","msg":"Server listening at http://127.0.0.1:3001"}
+auth-service-1  | {"level":30,"time":1777337710802,"pid":1,"hostname":"1dae50ad8587","msg":"Server listening at http://172.18.0.5:3001"}
+auth-service-1  | {"level":30,"time":1777337710802,"pid":1,"hostname":"1dae50ad8587","msg":"auth-service rodando na porta 3001"}
+auth-service-1  | {"level":30,"time":1777337980159,"pid":1,"hostname":"1dae50ad8587","reqId":"req-1","req":{"method":"GET","url":"/health","host":"auth-service:3001","remoteAddress":"172.18.0.9","remotePort":35040},"msg":"incoming request"}
+auth-service-1  | {"level":30,"time":1777337980182,"pid":1,"hostname":"1dae50ad8587","reqId":"req-1","res":{"statusCode":200},"responseTime":23.40847899997607,"msg":"request completed"}
+auth-service-1  | {"level":30,"time":1777338008514,"pid":1,"hostname":"1dae50ad8587","reqId":"req-2","req":{"method":"GET","url":"/health","host":"auth-service:3001","remoteAddress":"172.18.0.9","remotePort":35040},"msg":"incoming request"}
+auth-service-1  | {"level":30,"time":1777338008515,"pid":1,"hostname":"1dae50ad8587","reqId":"req-2","res":{"statusCode":200},"responseTime":0.46299100015312433,"msg":"request completed"}
+auth-service-1  | {"level":30,"time":1777338075972,"pid":1,"hostname":"1dae50ad8587","reqId":"req-3","req":{"method":"GET","url":"/health","host":"auth-service:3001","remoteAddress":"172.18.0.9","remotePort":35040},"msg":"incoming request"}
+auth-service-1  | {"level":30,"time":1777338075973,"pid":1,"hostname":"1dae50ad8587","reqId":"req-3","res":{"statusCode":200},"responseTime":0.6038790000602603,"msg":"request completed"}
+auth-service-1  | {"level":30,"time":1777338162691,"pid":1,"hostname":"1dae50ad8587","reqId":"req-4","req":{"method":"GET","url":"/health","host":"auth-service:3001","remoteAddress":"172.18.0.9","remotePort":36550},"msg":"incoming request"}
+auth-service-1  | {"level":30,"time":1777338162692,"pid":1,"hostname":"1dae50ad8587","reqId":"req-4","res":{"statusCode":200},"responseTime":0.3580299997702241,"msg":"request completed"}

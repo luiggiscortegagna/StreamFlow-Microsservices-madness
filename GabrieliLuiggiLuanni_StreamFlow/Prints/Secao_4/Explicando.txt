@@ -1,0 +1,15 @@
+catalog.json:
+Mostra conteúdos do catálogo.
+Mostra campo license_active.
+
+código do catalog-service:
+Mostra que o catalog-service usa catalog.db.
+Mostra tabela movies.
+Mostra campo license_active.
+Mostra rota /catalog/:id/license.
+
+código do recommendation-service:
+Mostra que o recommendation-service usa recommendation.db.
+Mostra tabela view_history.
+Mostra que view_history guarda movie_id.
+Mostra que recomendações usam histórico local, sem consultar o catalog-service.

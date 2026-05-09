@@ -1,0 +1,16 @@
+logs_analytics_com_billing_parado:
+Mostra pipeline sequencial do analytics.
+Coleta, agregação e formatação.
+Status 200 e responseTime de aproximadamente 278ms.
+
+analytics_com_billing_parado:
+Mostra relatório gerado mesmo com billing parado.
+Mostra totalSubscribers, monthlyRecurringRevenue, invoices e pipeline.
+Sustenta que analytics depende do banco, não da API do billing.
+
+play_sem_notification:
+Mostra que Play funciona sem notification-service.
+
+logs_streaming_sem_notification:
+Mostra que notification-service falhou, mas Play terminou com status 201.
+Sustenta que notification deve ser assíncrono, não consolidado necessariamente.

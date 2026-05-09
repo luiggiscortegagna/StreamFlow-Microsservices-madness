@@ -1,0 +1,14 @@
+billing-service-1  | {"level":30,"time":1777337710737,"pid":1,"hostname":"6176118e581a","msg":"Server listening at http://127.0.0.1:3006"}
+billing-service-1  | {"level":30,"time":1777337710738,"pid":1,"hostname":"6176118e581a","msg":"Server listening at http://172.18.0.6:3006"}
+billing-service-1  | {"level":30,"time":1777337710738,"pid":1,"hostname":"6176118e581a","msg":"billing-service rodando na porta 3006"}
+billing-service-1  | {"level":30,"time":1777337951101,"pid":1,"hostname":"6176118e581a","msg":"Server listening at http://127.0.0.1:3006"}
+billing-service-1  | {"level":30,"time":1777337951103,"pid":1,"hostname":"6176118e581a","msg":"Server listening at http://172.18.0.6:3006"}
+billing-service-1  | {"level":30,"time":1777337951103,"pid":1,"hostname":"6176118e581a","msg":"billing-service rodando na porta 3006"}
+billing-service-1  | {"level":30,"time":1777337980207,"pid":1,"hostname":"6176118e581a","reqId":"req-1","req":{"method":"GET","url":"/health","host":"billing-service:3006","remoteAddress":"172.18.0.9","remotePort":34296},"msg":"incoming request"}
+billing-service-1  | {"level":30,"time":1777337980210,"pid":1,"hostname":"6176118e581a","reqId":"req-1","res":{"statusCode":200},"responseTime":3.0771390004083514,"msg":"request completed"}
+billing-service-1  | {"level":30,"time":1777338011071,"pid":1,"hostname":"6176118e581a","reqId":"req-2","req":{"method":"GET","url":"/health","host":"billing-service:3006","remoteAddress":"172.18.0.9","remotePort":34296},"msg":"incoming request"}
+billing-service-1  | {"level":30,"time":1777338011072,"pid":1,"hostname":"6176118e581a","reqId":"req-2","res":{"statusCode":200},"responseTime":0.45287600019946694,"msg":"request completed"}
+billing-service-1  | {"level":30,"time":1777338075991,"pid":1,"hostname":"6176118e581a","reqId":"req-3","req":{"method":"GET","url":"/health","host":"billing-service:3006","remoteAddress":"172.18.0.9","remotePort":34296},"msg":"incoming request"}
+billing-service-1  | {"level":30,"time":1777338075993,"pid":1,"hostname":"6176118e581a","reqId":"req-3","res":{"statusCode":200},"responseTime":1.1109899999573827,"msg":"request completed"}
+billing-service-1  | {"level":30,"time":1777338165257,"pid":1,"hostname":"6176118e581a","reqId":"req-4","req":{"method":"GET","url":"/health","host":"billing-service:3006","remoteAddress":"172.18.0.9","remotePort":46244},"msg":"incoming request"}
+billing-service-1  | {"level":30,"time":1777338165257,"pid":1,"hostname":"6176118e581a","reqId":"req-4","res":{"statusCode":200},"responseTime":0.3599490001797676,"msg":"request completed"}

@@ -1,0 +1,20 @@
+logs_gateway:
+Mostra POST /api/streaming/play.
+Mostra que o gateway encaminha para /streaming/play.
+Mostra status 201 e responseTime de aproximadamente 2649ms.
+Mostra que o gateway sabe que demorou, mas não explica sozinho o motivo.
+
+logs_streaming_sem_notification:
+Mostra que o motivo interno da demora/falha está no notification-service.
+Mostra erro getaddrinfo ENOTFOUND notification-service.
+Isso prova que foi necessário abrir outro log para entender o problema.
+
+health_degraded:
+Mostra status "degraded".
+Mostra recommendation-service como "down".
+Mostra os demais serviços como "ok".
+
+logs_gateway_health_degraded:
+Mostra chamada GET /health.
+Mostra status 503.
+Confirma o estado degradado no gateway.

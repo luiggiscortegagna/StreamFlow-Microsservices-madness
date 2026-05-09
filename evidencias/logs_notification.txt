@@ -1,0 +1,14 @@
+notification-service-1  | {"level":30,"time":1777337710552,"pid":1,"hostname":"8aafbb0b03e8","msg":"Server listening at http://127.0.0.1:3005"}
+notification-service-1  | {"level":30,"time":1777337710553,"pid":1,"hostname":"8aafbb0b03e8","msg":"Server listening at http://172.18.0.7:3005"}
+notification-service-1  | {"level":30,"time":1777337710553,"pid":1,"hostname":"8aafbb0b03e8","msg":"notification-service rodando na porta 3005"}
+notification-service-1  | {"level":30,"time":1777337753972,"pid":1,"hostname":"8aafbb0b03e8","msg":"Server listening at http://127.0.0.1:3005"}
+notification-service-1  | {"level":30,"time":1777337753973,"pid":1,"hostname":"8aafbb0b03e8","msg":"Server listening at http://172.18.0.7:3005"}
+notification-service-1  | {"level":30,"time":1777337753973,"pid":1,"hostname":"8aafbb0b03e8","msg":"notification-service rodando na porta 3005"}
+notification-service-1  | {"level":30,"time":1777337980199,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-1","req":{"method":"GET","url":"/health","host":"notification-service:3005","remoteAddress":"172.18.0.9","remotePort":39922},"msg":"incoming request"}
+notification-service-1  | {"level":30,"time":1777337980203,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-1","res":{"statusCode":200},"responseTime":3.4634019997902215,"msg":"request completed"}
+notification-service-1  | {"level":30,"time":1777338011069,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-2","req":{"method":"GET","url":"/health","host":"notification-service:3005","remoteAddress":"172.18.0.9","remotePort":39922},"msg":"incoming request"}
+notification-service-1  | {"level":30,"time":1777338011070,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-2","res":{"statusCode":200},"responseTime":0.600008999928832,"msg":"request completed"}
+notification-service-1  | {"level":30,"time":1777338075988,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-3","req":{"method":"GET","url":"/health","host":"notification-service:3005","remoteAddress":"172.18.0.9","remotePort":39922},"msg":"incoming request"}
+notification-service-1  | {"level":30,"time":1777338075990,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-3","res":{"statusCode":200},"responseTime":1.1721800002269447,"msg":"request completed"}
+notification-service-1  | {"level":30,"time":1777338165253,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-4","req":{"method":"GET","url":"/health","host":"notification-service:3005","remoteAddress":"172.18.0.9","remotePort":58040},"msg":"incoming request"}
+notification-service-1  | {"level":30,"time":1777338165254,"pid":1,"hostname":"8aafbb0b03e8","reqId":"req-4","res":{"statusCode":200},"responseTime":0.6351140001788735,"msg":"request completed"}

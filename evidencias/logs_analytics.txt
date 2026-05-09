@@ -1,0 +1,17 @@
+analytics-service-1  | {"level":30,"time":1777337710641,"pid":1,"hostname":"3fdcb7ab2527","msg":"Server listening at http://127.0.0.1:3007"}
+analytics-service-1  | {"level":30,"time":1777337710642,"pid":1,"hostname":"3fdcb7ab2527","msg":"Server listening at http://172.18.0.3:3007"}
+analytics-service-1  | {"level":30,"time":1777337710642,"pid":1,"hostname":"3fdcb7ab2527","msg":"analytics-service rodando na porta 3007"}
+analytics-service-1  | {"level":30,"time":1777337827621,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-1","req":{"method":"GET","url":"/analytics/report","host":"analytics-service:3007","remoteAddress":"172.18.0.9","remotePort":39946},"msg":"incoming request"}
+analytics-service-1  | {"level":30,"time":1777337827622,"pid":1,"hostname":"3fdcb7ab2527","msg":"Iniciando pipeline de relatório..."}
+analytics-service-1  | {"level":30,"time":1777337827622,"pid":1,"hostname":"3fdcb7ab2527","msg":"Etapa 1/3: Coletando dados de faturamento..."}
+analytics-service-1  | {"level":30,"time":1777337827774,"pid":1,"hostname":"3fdcb7ab2527","msg":"Etapa 2/3: Agregando métricas..."}
+analytics-service-1  | {"level":30,"time":1777337827876,"pid":1,"hostname":"3fdcb7ab2527","msg":"Etapa 3/3: Formatando relatório..."}
+analytics-service-1  | {"level":30,"time":1777337827900,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-1","res":{"statusCode":200},"responseTime":278.3066940000281,"msg":"request completed"}
+analytics-service-1  | {"level":30,"time":1777337980212,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-2","req":{"method":"GET","url":"/health","host":"analytics-service:3007","remoteAddress":"172.18.0.9","remotePort":42396},"msg":"incoming request"}
+analytics-service-1  | {"level":30,"time":1777337980213,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-2","res":{"statusCode":200},"responseTime":0.4325589998625219,"msg":"request completed"}
+analytics-service-1  | {"level":30,"time":1777338011073,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-3","req":{"method":"GET","url":"/health","host":"analytics-service:3007","remoteAddress":"172.18.0.9","remotePort":42396},"msg":"incoming request"}
+analytics-service-1  | {"level":30,"time":1777338011074,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-3","res":{"statusCode":200},"responseTime":0.3375979997217655,"msg":"request completed"}
+analytics-service-1  | {"level":30,"time":1777338075994,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-4","req":{"method":"GET","url":"/health","host":"analytics-service:3007","remoteAddress":"172.18.0.9","remotePort":42396},"msg":"incoming request"}
+analytics-service-1  | {"level":30,"time":1777338075994,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-4","res":{"statusCode":200},"responseTime":0.2961169998161495,"msg":"request completed"}
+analytics-service-1  | {"level":30,"time":1777338165259,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-5","req":{"method":"GET","url":"/health","host":"analytics-service:3007","remoteAddress":"172.18.0.9","remotePort":60686},"msg":"incoming request"}
+analytics-service-1  | {"level":30,"time":1777338165259,"pid":1,"hostname":"3fdcb7ab2527","reqId":"req-5","res":{"statusCode":200},"responseTime":0.440484999679029,"msg":"request completed"}

@@ -1,0 +1,11 @@
+Teste de latência:
+
+GET /api/catalog
+Tempo total: 0.007135s
+
+POST /api/streaming/play
+Tempo total: 0.259294s
+
+Diferença aproximada: 0.252159s
+0.259294 / 0.007135 = 36.34
+O endpoint de Play foi cerca de 36 vezes mais lento que a consulta ao catálogo.

@@ -1,0 +1,24 @@
+tempos_latencia:
+GET /api/catalog: 0.007135s.
+POST /api/streaming/play: 0.259294s.
+Play foi cerca de 36 vezes mais lento que catálogo.
+
+logs_streaming_sem_notification:
+Mostra falha ao chamar notification-service.
+Mesmo assim, Play termina com status 201.
+Tempo de resposta de aproximadamente 2627ms.
+
+play_sem_notification:
+Confirma que a reprodução iniciou sem notification-service.
+
+logs_recommendation:
+Mostra POST /recommendations/viewed.
+Status 200.
+responseTime de aproximadamente 16,86ms.
+Prova que recommendation-service entra no fluxo de Play.
+
+logs_catalog:
+Mostra GET /catalog/3/license.
+Status 200.
+responseTime de aproximadamente 4,36ms.
+Prova que catalog-service verifica licença no fluxo.

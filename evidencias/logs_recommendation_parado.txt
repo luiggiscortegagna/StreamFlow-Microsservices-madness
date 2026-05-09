@@ -1,0 +1,12 @@
+recommendation-service-1  | {"level":30,"time":1777337710765,"pid":1,"hostname":"9a5193fdfbb3","msg":"Server listening at http://127.0.0.1:3004"}
+recommendation-service-1  | {"level":30,"time":1777337710766,"pid":1,"hostname":"9a5193fdfbb3","msg":"Server listening at http://172.18.0.8:3004"}
+recommendation-service-1  | {"level":30,"time":1777337710766,"pid":1,"hostname":"9a5193fdfbb3","msg":"recommendation-service rodando na porta 3004"}
+recommendation-service-1  | {"level":30,"time":1777337724315,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-1","req":{"method":"POST","url":"/recommendations/viewed","host":"recommendation-service:3004","remoteAddress":"172.18.0.2","remotePort":44056},"msg":"incoming request"}
+recommendation-service-1  | {"level":30,"time":1777337724332,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-1","res":{"statusCode":200},"responseTime":16.860757999587804,"msg":"request completed"}
+recommendation-service-1  | {"level":30,"time":1777337980194,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-2","req":{"method":"GET","url":"/health","host":"recommendation-service:3004","remoteAddress":"172.18.0.9","remotePort":54926},"msg":"incoming request"}
+recommendation-service-1  | {"level":30,"time":1777337980195,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-2","res":{"statusCode":200},"responseTime":0.5545490002259612,"msg":"request completed"}
+recommendation-service-1  | {"level":30,"time":1777338071660,"pid":1,"hostname":"9a5193fdfbb3","msg":"Server listening at http://127.0.0.1:3004"}
+recommendation-service-1  | {"level":30,"time":1777338071661,"pid":1,"hostname":"9a5193fdfbb3","msg":"Server listening at http://172.18.0.8:3004"}
+recommendation-service-1  | {"level":30,"time":1777338071661,"pid":1,"hostname":"9a5193fdfbb3","msg":"recommendation-service rodando na porta 3004"}
+recommendation-service-1  | {"level":30,"time":1777338075984,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-1","req":{"method":"GET","url":"/health","host":"recommendation-service:3004","remoteAddress":"172.18.0.9","remotePort":37998},"msg":"incoming request"}
+recommendation-service-1  | {"level":30,"time":1777338075988,"pid":1,"hostname":"9a5193fdfbb3","reqId":"req-1","res":{"statusCode":200},"responseTime":3.490815999917686,"msg":"request completed"}

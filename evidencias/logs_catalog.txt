@@ -1,0 +1,13 @@
+catalog-service-1  | {"level":30,"time":1777337710706,"pid":1,"hostname":"8b8a63124be9","msg":"Server listening at http://127.0.0.1:3002"}
+catalog-service-1  | {"level":30,"time":1777337710707,"pid":1,"hostname":"8b8a63124be9","msg":"Server listening at http://172.18.0.4:3002"}
+catalog-service-1  | {"level":30,"time":1777337710707,"pid":1,"hostname":"8b8a63124be9","msg":"catalog-service rodando na porta 3002"}
+catalog-service-1  | {"level":30,"time":1777337724301,"pid":1,"hostname":"8b8a63124be9","reqId":"req-1","req":{"method":"GET","url":"/catalog/3/license","host":"catalog-service:3002","remoteAddress":"172.18.0.2","remotePort":45936},"msg":"incoming request"}
+catalog-service-1  | {"level":30,"time":1777337724305,"pid":1,"hostname":"8b8a63124be9","reqId":"req-1","res":{"statusCode":200},"responseTime":4.3571290001273155,"msg":"request completed"}
+catalog-service-1  | {"level":30,"time":1777337980187,"pid":1,"hostname":"8b8a63124be9","reqId":"req-2","req":{"method":"GET","url":"/health","host":"catalog-service:3002","remoteAddress":"172.18.0.9","remotePort":43404},"msg":"incoming request"}
+catalog-service-1  | {"level":30,"time":1777337980187,"pid":1,"hostname":"8b8a63124be9","reqId":"req-2","res":{"statusCode":200},"responseTime":0.48165900027379394,"msg":"request completed"}
+catalog-service-1  | {"level":30,"time":1777338008517,"pid":1,"hostname":"8b8a63124be9","reqId":"req-3","req":{"method":"GET","url":"/health","host":"catalog-service:3002","remoteAddress":"172.18.0.9","remotePort":43404},"msg":"incoming request"}
+catalog-service-1  | {"level":30,"time":1777338008518,"pid":1,"hostname":"8b8a63124be9","reqId":"req-3","res":{"statusCode":200},"responseTime":0.8132299999706447,"msg":"request completed"}
+catalog-service-1  | {"level":30,"time":1777338075975,"pid":1,"hostname":"8b8a63124be9","reqId":"req-4","req":{"method":"GET","url":"/health","host":"catalog-service:3002","remoteAddress":"172.18.0.9","remotePort":43404},"msg":"incoming request"}
+catalog-service-1  | {"level":30,"time":1777338075976,"pid":1,"hostname":"8b8a63124be9","reqId":"req-4","res":{"statusCode":200},"responseTime":0.6046190001070499,"msg":"request completed"}
+catalog-service-1  | {"level":30,"time":1777338162694,"pid":1,"hostname":"8b8a63124be9","reqId":"req-5","req":{"method":"GET","url":"/health","host":"catalog-service:3002","remoteAddress":"172.18.0.9","remotePort":58642},"msg":"incoming request"}
+catalog-service-1  | {"level":30,"time":1777338162694,"pid":1,"hostname":"8b8a63124be9","reqId":"req-5","res":{"statusCode":200},"responseTime":0.5633910000324249,"msg":"request completed"}

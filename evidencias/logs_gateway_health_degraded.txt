@@ -1,0 +1,103 @@
+gateway-1  | [00:55:11] [32mINFO[39m (1): [36mServer listening at http://127.0.0.1:8080[39m
+gateway-1  | [00:55:11] [32mINFO[39m (1): [36mServer listening at http://172.18.0.9:8080[39m
+gateway-1  | [00:55:11] [32mINFO[39m (1): [36mStreamFlow Gateway operando na porta 8080[39m
+gateway-1  | [00:55:24] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-1"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "POST",
+gateway-1  |       "url": "/api/streaming/play",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 52968
+gateway-1  |     }
+gateway-1  | [00:55:24] [32mINFO[39m (1): [36mfetching from remote server[39m
+gateway-1  |     [35mreqId[39m: "req-1"
+gateway-1  |     [35msource[39m: "/streaming/play"
+gateway-1  | [00:55:26] [32mINFO[39m (1): [36mresponse received[39m
+gateway-1  |     [35mreqId[39m: "req-1"
+gateway-1  | [00:55:26] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-1"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 201
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 2649.878471999895
+gateway-1  | [00:57:07] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-2"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "GET",
+gateway-1  |       "url": "/api/analytics/report",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 49570
+gateway-1  |     }
+gateway-1  | [00:57:07] [32mINFO[39m (1): [36mfetching from remote server[39m
+gateway-1  |     [35mreqId[39m: "req-2"
+gateway-1  |     [35msource[39m: "/analytics/report"
+gateway-1  | [00:57:07] [32mINFO[39m (1): [36mresponse received[39m
+gateway-1  |     [35mreqId[39m: "req-2"
+gateway-1  | [00:57:07] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-2"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 200
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 290.17822200013325
+gateway-1  | [00:59:40] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-3"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "GET",
+gateway-1  |       "url": "/health",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 47132
+gateway-1  |     }
+gateway-1  | [00:59:40] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-3"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 503
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 67.6115489997901
+gateway-1  | [01:00:08] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-4"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "GET",
+gateway-1  |       "url": "/health",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 48482
+gateway-1  |     }
+gateway-1  | [01:00:11] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-4"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 503
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 2561.364959999919
+gateway-1  | [01:01:15] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-5"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "GET",
+gateway-1  |       "url": "/health",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 40970
+gateway-1  |     }
+gateway-1  | [01:01:15] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-5"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 503
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 24.51842899993062
+gateway-1  | [01:02:42] [32mINFO[39m (1): [36mincoming request[39m
+gateway-1  |     [35mreqId[39m: "req-6"
+gateway-1  |     [35mreq[39m: {
+gateway-1  |       "method": "GET",
+gateway-1  |       "url": "/health",
+gateway-1  |       "host": "localhost:8080",
+gateway-1  |       "remoteAddress": "172.18.0.1",
+gateway-1  |       "remotePort": 38320
+gateway-1  |     }
+gateway-1  | [01:02:45] [32mINFO[39m (1): [36mrequest completed[39m
+gateway-1  |     [35mreqId[39m: "req-6"
+gateway-1  |     [35mres[39m: {
+gateway-1  |       "statusCode": 503
+gateway-1  |     }
+gateway-1  |     [35mresponseTime[39m: 2570.8320009997115
